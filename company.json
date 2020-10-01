@@ -1,0 +1,10 @@
+[
+  {
+    "company name": "Wipro",
+
+  "location": ["Bangalore", "Kochi", "Chennai"]
+  },
+  {
+     "company name": "TCS",
+    "location": ["Bangalore", "Kochi", "Chennai"]
+  } ]

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<database>
+  <datas>
+    <name>Wipro Ltd</name>
+    <type>Service based</type>
+  </datas>
+  <datas>
+    <name>TCS</name>
+    <type>Service based</type>
+  </datas>
+  <datas>
+    <name>HCL</name>
+    <type>Service based</type>
+  </datas>
+</database>
