@@ -17,6 +17,6 @@ request(options, function(err, res, body) {
   console.log(json);
   console.log(json.id);
   assert.strictEqual(res.statusCode, 200);
-  assert.strictEqual(json.id, 101);
+  assert.strictEqual(json.id, 1);
 
 });
