@@ -1,33 +1,22 @@
 const request = require('request');
-const express = require('express')
-let NodeJson = require('./indexJson');
-//const requests = require('supertest');
-const app = express();
+const express = require('express');
 const assert = require('assert');
 
-console.log(NodeJson);
-// run json copy file code
-NodeJson.jsonParse();
 
+const options = {
+  url: 'https://jsonplaceholder.typicode.com/posts/1',
+  method: 'GET',
+  headers: {
+    'Accept': 'application/json',
+    'Accept-Charset': 'utf-8',
+  }
+};
 
-//api for question 5
-app.get('/api/question/5', function (req, res) {
-    const options = {
-        url: 'https://jsonplaceholder.typicode.com/posts/1',
-        method: 'GET',
-        headers: {
-            'Accept': 'application/json',
-            'Accept-Charset': 'utf-8',
-        }
-    };
-    request(options, function (err, response, body) {
-        let json = JSON.parse(body);
-        assert.strictEqual(response.statusCode, 200);
-        assert.strictEqual(json.id, 1);
-        res.json( json );
-    });
- })
+request(options, function(err, res, body) {
+  let json = JSON.parse(body);
+  console.log(json);
+  console.log(json.id);
+  assert.strictEqual(res.statusCode, 200);
+  assert.strictEqual(json.id, 101);
 
-app.listen(3000, () => {
-    console.log("Server running on port 3000");
 });
